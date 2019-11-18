@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+<h1> Calculo de idades </h1>    
+<p>   
+    Digite o dia do nascimento da pessoa 1: <br>
+    <input type="number" id="d" placeholder="Dois algarismos">
+</p>
+<p>
+    Digite o mês de nascimento da pessoa 1: <br>
+    <input type="number" id="m" placeholder="Dois algarismos">
+</p>
+<p>
+    Digite o mês de nascimento da pessoa 1: <br>
+    <input type="number" id="a" placeholder="Quatro algarismos">
+</p>
+<p>
+    Digite o mês de nascimento da pessoa 2: <br>
+    <input type="number" id="d2" placeholder="Dois algarismos">
+</p>
+<p>
+    Digite o mês de nascimento da pessoa 2: <br>
+    <input type="number" id="m2" placeholder="Dois algarismos">
+</p>
+<p>
+    Digite o ano de nascimento da pessoa 2: <br>
+    <input type="number" id="a2" placeholder="Quatro algarismos">
+</p>
+<p>
+    <input type="button" value="Calcular" onclick="CalcularIdade()">
+</p>
+<p id = "resposta"></p>
+<script>
+    function CalcularIdade() {
+    var m = Number(document.all['m'].value);
+    var d = Number(document.all['d'].value);
+    var a = Number(document.all['a'].value);
+    var m2 = Number(document.all['m2'].value);
+    var d2 = Number(document.all['d2'].value);
+    var a2 = Number(document.all['a2'].value);
+    if (a > a2) {
+        var resposta = "Pessoa 2 é mais velha";
+        document.all['resposta'].innerHTML = resposta;
+        } else if (a2 > a) {
+            document.all['resposta'].innerHTML = "Pessoa 1 é mais velha";
+        } else if (a == a2) {
+           if (m > m2) {
+            document.all['resposta'].innerHTML ="Pessoa 2 é mais velha";
+        } else if (m2 > m) {
+            document.all['resposta'].innerHTML ="Pessoa 1 é mais velha";
+        } else if (m == m2) {
+               if (d > d2) {
+            document.all['resposta'].innerHTML =" Pessoa 2 é mais velha";
+        } else if (d2 > d) {
+            document.all['resposta'].innerHTML ="Pessoa 1 é mais velha";
+        } else if (d == d2) {
+            document.all['resposta'].innerHTML ="As pessoas possuem a mesma idade.";
+                }
+            }
+        }
+     }
+</script>
+</body>
+</html>

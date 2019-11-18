@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+<h1>Calculando salário</h1>
+<script>
+    for (var i = 0; i < 5; i++) {
+        var salario = +prompt("Digite seu salário:");
+            if (salario <= 500) {
+                salario = salario * 1.05;
+            } else if (salario >= 500 && salario <= 1200) {
+                salario = salario * 1.12;
+            } if (salario <= 600) {
+                salario = salario + 150;
+            } else if (salario > 600) {
+                salario = salario + 100;
+            }
+            document.write("Seu salário é :" + salario.toFixed(2)+ "<br>");
+    } 
+</script>
+</body>
+</html>

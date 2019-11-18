@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+    <h1>Ordem Crescente</h1>
+
+    <script>
+        var vet = [20];
+        var aux;
+        for(var x = 0; x < 20; x++){
+            vet[x] = parseInt(prompt("Digite um numero:"));
+        }
+        for(var x = 20; x >= 0; x--){
+            for(var y = 0; y < 20; y++){
+                if(vet[y] >= vet[y+1]){
+                    aux = vet[y];
+                    vet[y] = vet[y+1];
+                    vet[y+1] = aux;
+                }
+            }
+        }
+        document.write("Ordem crescente: " + "<br>");
+        for(var x = 0; x < 20; x++){
+            document.write(vet[x] + "<br>");
+        }
+    </script>
+</body>
+</html>

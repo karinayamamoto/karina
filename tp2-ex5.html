@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+<h1>Fatorial</h1>
+<p>
+    Digite o valor a ser fatorado :
+</p>
+<input type="text" name="numero" id="numero">
+<br><br>
+<input type="button" value="calcular" onclick="fatorial()">
+<br>
+<p id="resultado">Resultado:</p>
+  <script>
+  function fatorial() {
+    var num = document.getElementById('numero');
+    var res = document.getElementById('resultado');
+    var numero = Number(num.value);
+
+    if(numero < 0) {
+    return 'O valor não pode ser negativo';
+
+    } else if ((numero == 0) || (numero == 1)) {
+    return 1;
+    } else {
+    var acumula = 1;
+    for(x = numero;x > 1; x--) {
+        acumula = acumula * x;
+    }
+    res.innerHTML = acumula;
+    } 
+  }
+</script>
+</body>
+</html>

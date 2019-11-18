@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+     <h1>Números positivos e negativos</h1>
+
+    <script>
+        var num = [8];
+        var pos = [];
+        var numneg = [];
+        for(var x = 0; x < 8; x++){
+            num[x] = parseInt(prompt("Digite um número:"));
+        }
+    
+        for (var x = 0; x < 8; x++){
+            if(num[x] < 0){
+                numneg.push(num[x]);
+            }
+            else{
+                pos.push(num[x]);
+            }
+        }
+        for (var x = 0; x < pos.length; x++){           
+            document.write("Valor Positivo: " + pos[x] + "<br>");
+        }
+        for (var x = 0; x < numneg.length; x++){
+            document.write("Valor Negativo: " + numneg[x] + "<br>");
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+<h1>Vinhos</h1>
+<p>
+    Digite a quantidade de Vinho Tinto: <br>
+    <input type="text" id="vt">
+</p>
+<p>
+    Digite a quantidade de Vinho Branco: <br>
+    <input type="text" id="vb">
+</p>
+<p>
+    Digite a quantidade de Vinho Rosê: <br>
+    <input type="text" id="vr">
+</p>
+<p>
+    <input type="button" value="Verificar" onclick="verificarEstoque()">
+</p>
+<script>
+    function verificarEstoque() {
+        var vtnt = Number(document.all['vt'].value);
+        var vbr = Number(document.all['vb'].value);
+        var vrs = Number(document.all['vr'].value);
+        var soma = vtnt + vbr + vrs;
+        if (soma < 50) {
+            alert("Quantidade insuficiente. Você precisa ter 50 vinhos")
+        } else {
+            document.write("A porcentagem do Vinho Tinto é: " + vtnt/0.5 + "%"
+             +  " , a porcentagem de Vinho Branco é: " + vbr/0.5 + "%" 
+             + " e a porcentagem de Vinho Rosê é: " + vrs/0.5 + "%");
+        }
+    }
+
+</script>
+</body>
+</html>

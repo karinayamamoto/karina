@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+   <h1>Números maiores que 50</h1>
+    
+    <script>
+        var num = [8];
+        var z = 0;
+        for(var x = 0; x < 8; x++){
+            num[x] = parseInt(prompt("Digite um numero:"));
+        }
+        for(var x = 0; x < 8; x++){
+            if(num[x] > 50){
+                document.write("Número maior que 50: " + num[x] + "<br>");
+                document.write("Sua posição: " + (x+1) + "<br>");
+            }
+            else {
+                z++;
+            }
+        }
+        if (z == 8){
+            document.write("Nenhum número acima de 50 foi digitado");
+        }
+    </script>
+    </body>
+    </html>

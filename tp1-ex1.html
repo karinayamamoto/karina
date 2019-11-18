@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+<h1>Fórmula de Bhaskara - Calculando raízes</h1>
+<p>
+    Digite o valor de A: <br>
+    <input type="number" id="a" placeholder="Insira o valor de a">
+</p>
+<p>
+    Digite o valor de B: <br>
+    <input type="number" id="b" placeholder="Insira o valor de b">
+</p>
+<p>
+    Digite o valor de C: <br>
+    <input type="number" id="c" placeholder="Insira o valor de c">
+</p>
+<p>
+    <input type="button" value="Calcular" onclick="calcularRaiz()">
+</p>
+<p id="resposta"></p>
+<script>
+    function calcularRaiz() {
+        var a = Number(document.all['a'].value);
+        var b = Number(document.all['b'].value);
+        var c = Number(document.all['c'].value);
+        var delta = (b*b)-4*a*c;
+        if (delta > 0) {
+            var x1 = (-b + Math.sqrt(delta))/2*a;
+            var x2 = (-b - Math.sqrt(delta))/2*a;
+            var resposta = "O valor de x1 é: " + x1 + " e o valor de x2 é: " + x2 + ".";
+            document.all['resposta'].innerHTML = resposta;
+        } else if (delta < 0) {
+            document.all['resposta'].innerHTML = "Não possui raiz.";
+        } else if (delta = 0) {
+            var x = -b/2*a;
+            document.all['resposta'].innerHTML = "O valor de x é: " + x + ".";
+        }
+    }
+</script>
+</body>
+</html>

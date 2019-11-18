@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+<h1>Média ponderada e situação</h1>
+<p>
+    Digite a nota de trabalho: <br>
+    <input type="text" id="trabalho" placeholder="Notas de 0 a 10">  
+</p>
+<p>
+    Digite a nota de avaliação: <br>
+    <input type="text" id="avaliacao" placeholder="Notas de 0 a 10">
+</p>
+<p> 
+    Digite a nota de exame: <br>
+    <input type="text" id="exame" placeholder="Notas de 0 a 10">
+</p>
+<p>
+    <input type="button" value="Calcular" onclick="CalcularMedia()">
+</p>
+<p id="resposta"></p>
+<script>
+    function CalcularMedia() {
+        var trabalho = Number(document.all['trabalho'].value);
+        var avaliacao = Number(document.all['avaliacao'].value);
+        var exame = Number(document.all['exame'].value);
+        var media = (trabalho *2  + avaliacao *3 + exame *5)/10;
+        if (media >= 8.0 & media <= 10.0) {
+            var resposta = "Sua média é: " + media + ", A" + ".";
+            document.all['resposta'].innerHTML = resposta;  
+        } else if (media >= 7.0 & media <= 7.9) {
+            document.all['resposta'].innerHTML = "Sua média é: " + media + ", B" + ".";
+        } else if (media >= 6.0 & media <= 6.9) {
+            document.all['resposta'].innerHTML = "Sua média é: " + media + ", C" + "."; 
+        } else if (media >= 5.0 & media <= 5.9) {
+            document.all['resposta'].innerHTML = "Sua média é: " + media + ", D" + ".";
+        } else 
+            document.all['resposta'].innerHTML = "Sua média é: " + media + ", E" + ".";
+        
+    }
+</script> 
+</body>
+</html>

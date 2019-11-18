@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 TP 1</title>
+</head>
+<body>
+<h1>Opções, multiplicar ou tirar a raiz</h1>
+<p>
+    Selecione a opçao: <br>
+    <select name="opção" id="opcao" onchange="escolherOpcao()">
+        <option value="0">Selecione</option>
+        <option value="1">Opção 1 Soma</option>
+        <option value="2">Opção 2 Raiz</option>
+    </select>
+</p>
+<script>
+    function escolherOpcao() {
+        var opcao = document.all['opcao'].value;
+        switch (opcao) {
+            case '1':
+                var x = +prompt("Digite um número: ");
+                var y = +prompt("Digite um outro número: ");
+                var z = x + y;
+                alert("A soma dos dois números é: " + z + ".")
+                break;
+                case '2': 
+                var l = prompt("Digite um número: ");
+                var k = Math.sqrt(l).toFixed(2);
+                alert("A raiz desse número é: " + k + ".")
+                break;
+        }
+    }
+</script>
+</body>
+</html>
